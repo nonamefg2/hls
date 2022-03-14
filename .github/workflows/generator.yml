@@ -464,6 +464,19 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
         $(youtube-dl -g https://youtube.com/channel/UChMCkc02GVSi89TrvhbRasA/live)
         EOL
+     - name: CNN
+       run: |
+        mkdir "Cable"
+        cd Cable
+        mkdir "US"
+        cd US
+        touch ./CNN.m3u8
+        sudo cat >./CNN.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://www.livenewsnow.com/american/cnn-live.html)
+        EOL
      - name : Upload artifact
        uses: actions/upload-artifact@master 
        with:
@@ -473,7 +486,7 @@ jobs:
        run: |
         git init
         git config --local user.name "actions"
-        git config --local user.email "action@github.com"
+        git config --local user.email "action@github.com" 
         git checkout -b live
         git add .
         git commit -m "Updates lives specified in extractor.yml"
