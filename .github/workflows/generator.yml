@@ -333,7 +333,7 @@ jobs:
         EOL
      - name: ORF 1
        run: |
-	    mkdir "AT"
+        mkdir AT
         cd AT
         touch ./ORF1.m3u8
         sudo cat >./ORF1.m3u8 <<EOL
@@ -384,7 +384,7 @@ jobs:
         EOL
      - name: SRF 1
        run: |
-	    mkdir CH/Deutsch
+	mkdir "CH/Deutsch"
         cd CH/Deutsch
         touch ./SRF1.m3u8
         sudo cat >./SRF1.m3u8 <<EOL
