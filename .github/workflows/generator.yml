@@ -13,8 +13,8 @@ jobs:
         sudo chmod a+rx /usr/local/bin/youtube-dl
      - name: RTL
        run: |
-        mkdir "DTF"
-        cd DTF
+        mkdir "DE"
+        cd DE
         touch ./RTL.m3u8
         sudo cat >./RTL.m3u8 <<EOL
         #EXTM3U
@@ -24,7 +24,7 @@ jobs:
         EOL
      - name: RTL 2
        run: |
-        cd DTF
+        cd DE
         touch ./RTL2.m3u8
         sudo cat >./RTL2.m3u8 <<EOL
         #EXTM3U
@@ -34,7 +34,7 @@ jobs:
         EOL
      - name: RTL Nitro
        run: |
-        cd DTF
+        cd DE
         touch ./RTLNitro.m3u8
         sudo cat >./RTLNitro.m3u8 <<EOL
         #EXTM3U
@@ -44,7 +44,7 @@ jobs:
         EOL
      - name: Super RTL
        run: |
-        cd DTF
+        cd DE
         touch ./SuperRTL.m3u8
         sudo cat >./SuperRTL.m3u8 <<EOL
         #EXTM3U
@@ -54,7 +54,7 @@ jobs:
         EOL
      - name: ZDF
        run: |
-        cd DTF
+        cd DE
         touch ./ZDF.m3u8
         sudo cat >./ZDF.m3u8 <<EOL
         #EXTM3U
@@ -64,7 +64,7 @@ jobs:
         EOL
      - name: ZDFinfo
        run: |
-        cd DTF
+        cd DE
         touch ./ZDFinfo.m3u8
         sudo cat >./ZDFinfo.m3u8 <<EOL
         #EXTM3U
@@ -74,7 +74,7 @@ jobs:
         EOL
      - name: ZDFneo
        run: |
-        cd DTF
+        cd DE
         touch ./ZDFneo.m3u8
         sudo cat >./ZDFneo.m3u8 <<EOL
         #EXTM3U
@@ -84,7 +84,7 @@ jobs:
         EOL
      - name: ProSieben
        run: |
-        cd DTF
+        cd DE
         touch ./pro7.m3u8
         sudo cat >./pro7.m3u8 <<EOL
         #EXTM3U
@@ -94,7 +94,7 @@ jobs:
         EOL
      - name: ProSieben MAXX
        run: |
-        cd DTF
+        cd DE
         touch ./pro7max.m3u8
         sudo cat >./pro7max.m3u8 <<EOL
         #EXTM3U
@@ -104,7 +104,7 @@ jobs:
         EOL
      - name: Kabel Eins
        run: |
-        cd DTF
+        cd DE
         touch ./kabel1.m3u8
         sudo cat >./kabel1.m3u8 <<EOL
         #EXTM3U
@@ -114,7 +114,7 @@ jobs:
         EOL
      - name: Kabel Eins Doku
        run: |
-        cd DTF
+        cd DE
         touch ./kabel1doku.m3u8
         sudo cat >./kabel1doku.m3u8 <<EOL
         #EXTM3U
@@ -124,7 +124,7 @@ jobs:
         EOL
      - name: Sat1
        run: |
-        cd DTF
+        cd DE
         touch ./sat1.m3u8
         sudo cat >./sat1.m3u8 <<EOL
         #EXTM3U
@@ -134,7 +134,7 @@ jobs:
         EOL
      - name: Sat1 Gold
        run: |
-        cd DTF
+        cd DE
         touch ./sat1gold.m3u8
         sudo cat >./sat1gold.m3u8 <<EOL
         #EXTM3U
@@ -144,7 +144,7 @@ jobs:
         EOL
      - name: SIXX
        run: |
-        cd DTF
+        cd DE
         touch ./sixx.m3u8
         sudo cat >./sixx.m3u8 <<EOL
         #EXTM3U
@@ -154,7 +154,7 @@ jobs:
         EOL
      - name: VOX
        run: |
-        cd DTF
+        cd DE
         touch ./VOX.m3u8
         sudo cat >./VOX.m3u8 <<EOL
         #EXTM3U
@@ -163,7 +163,7 @@ jobs:
         $(youtube-dl -g https://www.2ix2.com/vox/)
      - name: n-tv
        run: |
-        cd DTF
+        cd DE
         touch ./n-tv.m3u8
         sudo cat >./n-tv.m3u8 <<EOL
         #EXTM3U
@@ -173,7 +173,7 @@ jobs:
         EOL
      - name: DMAX
        run: |
-        cd DTF
+        cd DE
         touch ./DMAX.m3u8
         sudo cat >./DMAX.m3u8 <<EOL
         #EXTM3U
@@ -183,7 +183,7 @@ jobs:
         EOL
      - name: TLC
        run: |
-        cd DTF
+        cd DE
         touch ./TLC.m3u8
         sudo cat >./TLC.m3u8 <<EOL
         #EXTM3U
@@ -193,7 +193,7 @@ jobs:
         EOL
      - name: Sky Sport News
        run: |
-        cd DTF
+        cd DE
         touch ./SkySN.m3u8
         sudo cat >./SkySN.m3u8 <<EOL
         #EXTM3U
@@ -203,7 +203,7 @@ jobs:
         EOL
      - name: KIKA
        run: |
-        cd DTF
+        cd DE
         touch ./KIKA.m3u8
         sudo cat >./KIKA.m3u8 <<EOL
         #EXTM3U
@@ -213,7 +213,7 @@ jobs:
         EOL
      - name: Disney Channel
        run: |
-        cd DTF
+        cd DE
         touch ./DisneyChannel.m3u8
         sudo cat >./DisneyChannel.m3u8 <<EOL
         #EXTM3U
@@ -223,7 +223,7 @@ jobs:
         EOL
      - name: Tele5
        run: |
-        cd DTF
+        cd DE
         touch ./Tele5.m3u8
         sudo cat >./Tele5.m3u8 <<EOL
         #EXTM3U
@@ -233,7 +233,7 @@ jobs:
         EOL
      - name: Comedy Central
        run: |
-        cd DTF
+        cd DE
         touch ./ComedyCentral.m3u8
         sudo cat >./ComedyCentral.m3u8 <<EOL
         #EXTM3U
@@ -243,7 +243,7 @@ jobs:
         EOL
      - name: 3sat
        run: |
-        cd DTF
+        cd DE
         touch ./3sat.m3u8
         sudo cat >./3sat.m3u8 <<EOL
         #EXTM3U
@@ -253,7 +253,7 @@ jobs:
         EOL
      - name: Tele5
        run: |
-        cd DTF
+        cd DE
         touch ./Tele5.m3u8
         sudo cat >./Tele5.m3u8 <<EOL
         #EXTM3U
@@ -263,7 +263,7 @@ jobs:
         EOL
      - name: WELT
        run: |
-        cd DTF
+        cd DE
         touch ./WELT.m3u8
         sudo cat >./WELT.m3u8 <<EOL
         #EXTM3U
@@ -273,7 +273,7 @@ jobs:
         EOL
      - name: arte
        run: |
-        cd DTF
+        cd DE
         touch ./arte.m3u8
         sudo cat >./arte.m3u8 <<EOL
         #EXTM3U
@@ -283,7 +283,7 @@ jobs:
         EOL
      - name: Nickelodeon
        run: |
-        cd DTF
+        cd DE
         touch ./nick.m3u8
         sudo cat >./nick.m3u8 <<EOL
         #EXTM3U
@@ -293,7 +293,7 @@ jobs:
         EOL
      - name: MTV
        run: |
-        cd DTF
+        cd DE
         touch ./MTV.m3u8
         sudo cat >./MTV.m3u8 <<EOL
         #EXTM3U
@@ -303,7 +303,7 @@ jobs:
         EOL
      - name: Das Erste
        run: |
-        cd DTF
+        cd DE
         touch ./DasErste.m3u8
         sudo cat >./DasErste.m3u8 <<EOL
         #EXTM3U
@@ -313,7 +313,7 @@ jobs:
         EOL
      - name: ARD One
        run: |
-        cd DTF
+        cd DE
         touch ./one.m3u8
         sudo cat >./one.m3u8 <<EOL
         #EXTM3U
@@ -323,7 +323,7 @@ jobs:
         EOL
      - name: Phoenix
        run: |
-        cd DTF
+        cd DE
         touch ./Phoenix.m3u8
         sudo cat >./Phoenix.m3u8 <<EOL
         #EXTM3U
@@ -333,7 +333,8 @@ jobs:
         EOL
      - name: ORF 1
        run: |
-        cd DTF
+	    mkdir "AT"
+        cd AT
         touch ./ORF1.m3u8
         sudo cat >./ORF1.m3u8 <<EOL
         #EXTM3U
@@ -343,7 +344,7 @@ jobs:
         EOL
      - name: ORF 2
        run: |
-        cd DTF
+        cd AT
         touch ./ORF2.m3u8
         sudo cat >./ORF2.m3u8 <<EOL
         #EXTM3U
@@ -353,7 +354,7 @@ jobs:
         EOL
      - name: ORF 3
        run: |
-        cd DTF
+        cd AT
         touch ./ORF3.m3u8
         sudo cat >./ORF3.m3u8 <<EOL
         #EXTM3U
@@ -363,7 +364,7 @@ jobs:
         EOL
      - name: Servus TV
        run: |
-        cd DTF
+        cd AT
         touch ./servus.m3u8
         sudo cat >./servus.m3u8 <<EOL
         #EXTM3U
@@ -373,7 +374,7 @@ jobs:
         EOL
      - name: Landle
        run: |
-        cd DTF
+        cd AT
         touch ./landle.m3u8
         sudo cat >./landle.m3u8 <<EOL
         #EXTM3U
@@ -383,7 +384,8 @@ jobs:
         EOL
      - name: SRF 1
        run: |
-        cd DTF
+	    mkdir CH/Deutsch
+        cd CH/Deutsch
         touch ./SRF1.m3u8
         sudo cat >./SRF1.m3u8 <<EOL
         #EXTM3U
@@ -393,7 +395,7 @@ jobs:
         EOL
      - name: SRF 2
        run: |
-        cd DTF
+        cd CH/Deutsch
         touch ./SRF2.m3u8
         sudo cat >./SRF2.m3u8 <<EOL
         #EXTM3U
@@ -403,7 +405,7 @@ jobs:
         EOL
      - name: SRF Info
        run: |
-        cd DTF
+        cd CH/Deutsch
         touch ./ORF3.m3u8
         sudo cat >./ORF3.m3u8 <<EOL
         #EXTM3U
@@ -413,9 +415,9 @@ jobs:
         EOL
      - name: 4+
        run: |
-        cd DTF
+        cd CH/Deutsch
         touch ./4plus.m3u8
-        sudo cat >./plus.m3u8 <<EOL
+        sudo cat >./4plus.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
@@ -423,8 +425,8 @@ jobs:
         EOL
      - name: RTVE 24h
        run: |
-        mkdir "TDT"
-        cd TDT
+        mkdir "ES"
+        cd ES
         touch ./24h.m3u8
         sudo cat >./24h.m3u8 <<EOL
         #EXTM3U
@@ -434,7 +436,7 @@ jobs:
         EOL
      - name: 7NN
        run: |
-        cd TDT
+        cd ES
         touch ./7nn.m3u8
         sudo cat >./7nn.m3u8 <<EOL
         #EXTM3U
@@ -444,7 +446,7 @@ jobs:
         EOL
      - name: Libertad Digital
        run: |
-        cd TDT
+        cd ES
         touch ./libertaddigital.m3u8
         sudo cat >./libertaddigital.m3u8 <<EOL
         #EXTM3U
@@ -454,7 +456,7 @@ jobs:
         EOL
      - name: Dejate de Historias - Madrid
        run: |
-        cd TDT
+        cd ES
         mkdir "Madrid"
         cd Madrid
         touch ./DH.m3u8
@@ -464,18 +466,91 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
         $(youtube-dl -g https://youtube.com/channel/UChMCkc02GVSi89TrvhbRasA/live)
         EOL
+	 - name: A24
+       run: |
+	    mkdir "AR"
+        cd AR
+        touch ./A24.m3u8
+        sudo cat >./A24.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://youtube.com/A24com/live)
+        EOL
+	 - name: America
+       run: |
+	    mkdir "AR"
+        cd AR
+        touch ./America.m3u8
+        sudo cat >./America.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://youtube.com/americaenvivo/live)
+        EOL
+	 - name: TVP Argentina
+       run: |
+	    mkdir "AR"
+        cd AR
+        touch ./TVP.m3u8
+        sudo cat >./TVP.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://youtube.com/TVPublicaArgentina/live)
+        EOL
+	 - name: LN+
+       run: |
+	    mkdir "AR"
+        cd AR
+        touch ./LNMas.m3u8
+        sudo cat >./LNMas.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://youtube.com/LaNacionMas/live)
+        EOL
+	 - name: C5N
+       run: |
+	    mkdir "AR"
+        cd AR
+        touch ./C5N.m3u8
+        sudo cat >./C5N.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://youtube.com/c5n/live)
+        EOL
      - name: CNN
        run: |
-        mkdir "Cable"
-        cd Cable
-        mkdir "US"
-        cd US
+        mkdir "US/Cable"
+        cd US/Cable
         touch ./CNN.m3u8
         sudo cat >./CNN.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
         $(youtube-dl -g https://www.livenewsnow.com/american/cnn-live.html)
+        EOL
+     - name: MSNBC
+       run: |
+        cd US/Cable
+        touch ./MSNBC.m3u8
+        sudo cat >./MSNBC.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://livenewsmag.com/msnbc-live-tv)
+        EOL
+     - name: FBN
+       run: |
+        cd US/Cable
+        touch ./FBN.m3u8
+        sudo cat >./FBN.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://www.livenewsnow.com/business/fox-business-network-fbn.html)
         EOL
      - name : Upload artifact
        uses: actions/upload-artifact@master 
