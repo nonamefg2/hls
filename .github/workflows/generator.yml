@@ -384,18 +384,18 @@ jobs:
         EOL
      - name: SRF 1
        run: |
-	mkdir "CH/Deutsch"
-        cd CH/Deutsch
-        touch ./SRF1.m3u8
-        sudo cat >./SRF1.m3u8 <<EOL
+        mkdir "CH/DE"
+        cd "CH/DE"
+        touch ./SRF2.m3u8
+        sudo cat >./SRF2.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://www.2ix2.com/srf-1/)
+        $(youtube-dl -g https://www.2ix2.com/srf-2/)
         EOL
      - name: SRF 2
        run: |
-        cd CH/Deutsch
+        cd "CH/DE"
         touch ./SRF2.m3u8
         sudo cat >./SRF2.m3u8 <<EOL
         #EXTM3U
@@ -405,7 +405,7 @@ jobs:
         EOL
      - name: SRF Info
        run: |
-        cd CH/Deutsch
+        cd "CH/DE"
         touch ./ORF3.m3u8
         sudo cat >./ORF3.m3u8 <<EOL
         #EXTM3U
@@ -415,7 +415,7 @@ jobs:
         EOL
      - name: 4+
        run: |
-        cd CH/Deutsch
+        cd "CH/DE"
         touch ./4plus.m3u8
         sudo cat >./4plus.m3u8 <<EOL
         #EXTM3U
@@ -466,9 +466,9 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
         $(youtube-dl -g https://youtube.com/channel/UChMCkc02GVSi89TrvhbRasA/live)
         EOL
-	 - name: A24
+     - name: A24
        run: |
-	    mkdir "AR"
+        mkdir "AR"
         cd AR
         touch ./A24.m3u8
         sudo cat >./A24.m3u8 <<EOL
@@ -477,9 +477,8 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
         $(youtube-dl -g https://youtube.com/A24com/live)
         EOL
-	 - name: America
+     - name: America
        run: |
-	    mkdir "AR"
         cd AR
         touch ./America.m3u8
         sudo cat >./America.m3u8 <<EOL
@@ -488,9 +487,9 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
         $(youtube-dl -g https://youtube.com/americaenvivo/live)
         EOL
-	 - name: TVP Argentina
+     - name: TVP Argentina
        run: |
-	    mkdir "AR"
+        mkdir "AR"
         cd AR
         touch ./TVP.m3u8
         sudo cat >./TVP.m3u8 <<EOL
@@ -499,9 +498,9 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
         $(youtube-dl -g https://youtube.com/TVPublicaArgentina/live)
         EOL
-	 - name: LN+
+     - name: LN+
        run: |
-	    mkdir "AR"
+        mkdir "AR"
         cd AR
         touch ./LNMas.m3u8
         sudo cat >./LNMas.m3u8 <<EOL
@@ -510,9 +509,8 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
         $(youtube-dl -g https://youtube.com/LaNacionMas/live)
         EOL
-	 - name: C5N
+     - name: C5N
        run: |
-	    mkdir "AR"
         cd AR
         touch ./C5N.m3u8
         sudo cat >./C5N.m3u8 <<EOL
@@ -534,7 +532,7 @@ jobs:
         EOL
      - name: MSNBC
        run: |
-        cd US/Cable
+        cd "US/Cable"
         touch ./MSNBC.m3u8
         sudo cat >./MSNBC.m3u8 <<EOL
         #EXTM3U
@@ -544,7 +542,7 @@ jobs:
         EOL
      - name: FBN
        run: |
-        cd US/Cable
+        cd "US/Cable"
         touch ./FBN.m3u8
         sudo cat >./FBN.m3u8 <<EOL
         #EXTM3U
