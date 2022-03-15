@@ -385,7 +385,7 @@ jobs:
      - name: SRF 1
        run: |
         mkdir "CH"
-        cd "CH"
+        cd CH
         touch ./SRF2.m3u8
         sudo cat >./SRF2.m3u8 <<EOL
         #EXTM3U
@@ -395,7 +395,7 @@ jobs:
         EOL
      - name: SRF 2
        run: |
-        cd "CH"
+        cd CH
         touch ./SRF2.m3u8
         sudo cat >./SRF2.m3u8 <<EOL
         #EXTM3U
@@ -405,7 +405,7 @@ jobs:
         EOL
      - name: SRF Info
        run: |
-        cd "CH"
+        cd CH
         touch ./ORF3.m3u8
         sudo cat >./ORF3.m3u8 <<EOL
         #EXTM3U
@@ -415,7 +415,7 @@ jobs:
         EOL
      - name: 4+
        run: |
-        cd "CH"
+        cd CH
         touch ./4plus.m3u8
         sudo cat >./4plus.m3u8 <<EOL
         #EXTM3U
@@ -520,7 +520,7 @@ jobs:
      - name: CNN
        run: |
         mkdir "US"
-        cd "US"
+        cd US
         touch ./CNN.m3u8
         sudo cat >./CNN.m3u8 <<EOL
         #EXTM3U
@@ -530,7 +530,7 @@ jobs:
         EOL
      - name: MSNBC
        run: |
-        cd "US"
+        cd US
         touch ./MSNBC.m3u8
         sudo cat >./MSNBC.m3u8 <<EOL
         #EXTM3U
@@ -540,7 +540,7 @@ jobs:
         EOL
      - name: FBN
        run: |
-        cd "US"
+        cd US
         touch ./FBN.m3u8
         sudo cat >./FBN.m3u8 <<EOL
         #EXTM3U
