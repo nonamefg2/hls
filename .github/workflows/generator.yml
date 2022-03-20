@@ -580,7 +580,7 @@ jobs:
         $(youtube-dl -g https://youtube.com/NHKWORLDJAPAN/live)
         EOL
      - name : Upload artifact
-       uses: actions/upload-artifact@master  https://youtube.com/channel/UCuTAXTexrhetbOe3zgskJBQ/live
+       uses: actions/upload-artifact@master
        with:
         name: Push pt.1
         path: .
