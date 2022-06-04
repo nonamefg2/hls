@@ -146,16 +146,6 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
         $(youtube-dl -g https://www.livenewsnow.com/american/cnbc.html)
         EOL
-     - name: CNBC
-       run: |
-        cd US
-        touch ./CNBC.m3u8
-        sudo cat >./CNBC.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://www.livenewsnow.com/american/cnbc.html)
-        EOL
      - name: NTV24
        run: |
         mkdir "JP"
@@ -187,7 +177,7 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
         $(youtube-dl -g https://youtube.com/NHKWORLDJAPAN/live)
         EOL
-     - name: CNN
+     - name: CBC News
        run: |
         mkdir "CA"
         cd CA
