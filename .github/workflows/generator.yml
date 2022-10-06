@@ -1,7 +1,7 @@
 name: Generate livestreams
 on:
   schedule:
-    - cron: "45 */2 * * *"
+    - cron: "0 */4 * * *"
   workflow_dispatch:
 jobs:
   workflow_dispatch:
