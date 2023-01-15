@@ -199,8 +199,78 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
         $(youtube-dl -g https://www.youtube.com/@TaiwanPlusLive/live)
         EOL
-     - name : Upload artifact
-       uses: actions/upload-artifact@master
+     - name: FTV News
+       run: |
+        cd TW
+        touch ./FTVNews.m3u8
+        sudo cat >./FTVNews.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://youtube.com/@FTV_News/live)
+        EOL
+     - name: FTV News
+       run: |
+        cd TW
+        touch ./FTVNews.m3u8
+        sudo cat >./FTVNews.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://youtube.com/@FTV_News/live)
+        EOL
+     - name: TVBS News
+       run: |
+        cd TW
+        touch ./TVBSNews.m3u8
+        sudo cat >./TVBSNews.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://youtube.com/TVBSNEWS01/live)
+        EOL
+     - name: TTV News
+       run: |
+        cd TW
+        touch ./TTVNews.m3u8
+        sudo cat >./TTVNews.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://www.youtube.com/@TTV_NEWS/live)
+        EOL
+     - name: CTS News
+       run: |
+        cd TW
+        touch ./CTSNews.m3u8
+        sudo cat >./CTSNews.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://youtube.com/CtsTw/live)
+        EOL
+     - name: SET News
+       run: |
+        cd TW
+        touch ./SETNews.m3u8
+        sudo cat >./SETNews.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://youtu.be/FoBfXvlOR6I)
+        EOL
+     - name: SET+ News
+       run: |
+        cd TW
+        touch ./SETNewsPlus.m3u8
+        sudo cat >./SETNewsPlus.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://youtu.be/EB4g7wecgTI)
+        EOL
+     - name : Upload artifact 
+       uses: actions/upload-artifact@master 
        with:
         name: Push pt.1
         path: .
