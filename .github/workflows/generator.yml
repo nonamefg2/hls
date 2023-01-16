@@ -5,12 +5,12 @@ on:
   workflow_dispatch:
 jobs:
   workflow_dispatch:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
-     - name: Install youtube-dl
+     - name: Install yt-dlp
        run: |
-        sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
-        sudo chmod a+rx /usr/local/bin/youtube-dl
+        sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+        sudo chmod a+rx /usr/local/bin/yt-dlp
      - name: RTVE 24h
        run: |
         mkdir "ES"
@@ -20,7 +20,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://youtube.com/rtvenoticias/live)
+        $(yt-dlp -g https://youtube.com/rtvenoticias/live)
         EOL
      - name: 7NN
        run: |
@@ -30,7 +30,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://twitch.tv/7nntv)
+        $(yt-dlp -g https://twitch.tv/7nntv)
         EOL
      - name: Libertad Digital
        run: |
@@ -40,7 +40,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://dai.ly/xnm032)
+        $(yt-dlp -g https://dai.ly/xnm032)
         EOL
      - name: Dejate de Historias - Madrid
        run: |
@@ -52,7 +52,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://youtube.com/channel/UChMCkc02GVSi89TrvhbRasA/live)
+        $(yt-dlp -g https://youtube.com/channel/UChMCkc02GVSi89TrvhbRasA/live)
         EOL
      - name: A24
        run: |
@@ -63,7 +63,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://youtube.com/A24com/live)
+        $(yt-dlp -g https://youtube.com/A24com/live)
         EOL
      - name: America
        run: |
@@ -73,7 +73,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://youtube.com/americaenvivo/live)
+        $(yt-dlp -g https://youtube.com/americaenvivo/live)
         EOL
      - name: TVP Argentina
        run: |
@@ -83,7 +83,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://youtube.com/TVPublicaArgentina/live)
+        $(yt-dlp -g https://youtube.com/TVPublicaArgentina/live)
         EOL
      - name: LN+
        run: |
@@ -93,7 +93,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://youtube.com/LaNacionMas/live)
+        $(yt-dlp -g https://youtube.com/LaNacionMas/live)
         EOL
      - name: C5N
        run: |
@@ -103,7 +103,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://youtube.com/c5n/live)
+        $(yt-dlp -g https://youtube.com/c5n/live)
         EOL
      - name: CNN
        run: |
@@ -114,7 +114,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://www.livenewsnow.com/american/cnn-live.html)
+        $(yt-dlp -g https://www.livenewsnow.com/american/cnn-live.html)
         EOL
      - name: Weather Channel
        run: |
@@ -124,7 +124,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://www.livenewsnow.com/featured/weather-channel.html)
+        $(yt-dlp -g https://www.livenewsnow.com/featured/weather-channel.html)
         EOL
      - name: FBN
        run: |
@@ -134,7 +134,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://www.livenewsnow.com/business/fox-business-network-fbn.html)
+        $(yt-dlp -g https://www.livenewsnow.com/business/fox-business-network-fbn.html)
         EOL
      - name: CNBC
        run: |
@@ -144,7 +144,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://www.livenewsnow.com/american/cnbc.html)
+        $(yt-dlp -g https://www.livenewsnow.com/american/cnbc.html)
         EOL
      - name: NTV24
        run: |
@@ -155,7 +155,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://youtube.com/channel/UCuTAXTexrhetbOe3zgskJBQ/live)
+        $(yt-dlp -g https://youtube.com/channel/UCuTAXTexrhetbOe3zgskJBQ/live)
         EOL
      - name: TBS News Dig
        run: |
@@ -165,7 +165,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://youtube.com/tbsnews/live)
+        $(yt-dlp -g https://youtube.com/tbsnews/live)
         EOL
      - name: NHK World News
        run: |
@@ -175,7 +175,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://youtube.com/NHKWORLDJAPAN/live)
+        $(yt-dlp -g https://youtube.com/NHKWORLDJAPAN/live)
         EOL
      - name: CBC News
        run: |
@@ -186,7 +186,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://www.livenewsnow.com/canadian-news/cbc-news.html)
+        $(yt-dlp -g https://www.livenewsnow.com/canadian-news/cbc-news.html)
         EOL
      - name: Taiwan+
        run: |
@@ -197,7 +197,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://www.youtube.com/@TaiwanPlusLive/live)
+        $(yt-dlp -g https://www.youtube.com/@TaiwanPlusLive/live)
         EOL
      - name: FTV News
        run: |
@@ -207,7 +207,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://youtube.com/@FTV_News/live)
+        $(yt-dlp -g https://youtube.com/@FTV_News/live)
         EOL
      - name: FTV News
        run: |
@@ -217,7 +217,228 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://youtube.com/@FTV_News/live)
+        $(yt-dlp -g https://youtube.com/@FTV_News/live)
+        EOL
+name: Generate livestreams
+on:
+  schedule:
+    - cron: "0 */4 * * *"
+  workflow_dispatch:
+jobs:
+  workflow_dispatch:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Install yt-dlp
+       run: |
+        sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+        sudo chmod a+rx /usr/local/bin/yt-dlp
+     - name: RTVE 24h
+       run: |
+        mkdir "ES"
+        cd ES
+        touch ./24h.m3u8
+        sudo cat >./24h.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(yt-dlp -g https://youtube.com/rtvenoticias/live)
+        EOL
+     - name: 7NN
+       run: |
+        cd ES
+        touch ./7nn.m3u8
+        sudo cat >./7nn.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(yt-dlp -g https://twitch.tv/7nntv)
+        EOL
+     - name: Libertad Digital
+       run: |
+        cd ES
+        touch ./libertaddigital.m3u8
+        sudo cat >./libertaddigital.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(yt-dlp -g https://dai.ly/xnm032)
+        EOL
+     - name: Dejate de Historias - Madrid
+       run: |
+        cd ES
+        mkdir "Madrid"
+        cd Madrid
+        touch ./DH.m3u8
+        sudo cat >./DH.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(yt-dlp -g https://youtube.com/channel/UChMCkc02GVSi89TrvhbRasA/live)
+        EOL
+     - name: A24
+       run: |
+        mkdir "AR"
+        cd AR
+        touch ./A24.m3u8
+        sudo cat >./A24.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(yt-dlp -g https://youtube.com/A24com/live)
+        EOL
+     - name: America
+       run: |
+        cd AR
+        touch ./America.m3u8
+        sudo cat >./America.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(yt-dlp -g https://youtube.com/americaenvivo/live)
+        EOL
+     - name: TVP Argentina
+       run: |
+        cd AR
+        touch ./TVP.m3u8
+        sudo cat >./TVP.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(yt-dlp -g https://youtube.com/TVPublicaArgentina/live)
+        EOL
+     - name: LN+
+       run: |
+        cd AR
+        touch ./LNMas.m3u8
+        sudo cat >./LNMas.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(yt-dlp -g https://youtube.com/LaNacionMas/live)
+        EOL
+     - name: C5N
+       run: |
+        cd AR
+        touch ./C5N.m3u8
+        sudo cat >./C5N.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(yt-dlp -g https://youtube.com/c5n/live)
+        EOL
+     - name: CNN
+       run: |
+        mkdir "US"
+        cd US
+        touch ./CNN.m3u8
+        sudo cat >./CNN.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(yt-dlp -g https://www.livenewsnow.com/american/cnn-live.html)
+        EOL
+     - name: Weather Channel
+       run: |
+        cd US
+        touch ./WeatherChannel.m3u8
+        sudo cat >./WeatherChannel.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(yt-dlp -g https://www.livenewsnow.com/featured/weather-channel.html)
+        EOL
+     - name: FBN
+       run: |
+        cd US
+        touch ./FBN.m3u8
+        sudo cat >./FBN.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(yt-dlp -g https://www.livenewsnow.com/business/fox-business-network-fbn.html)
+        EOL
+     - name: CNBC
+       run: |
+        cd US
+        touch ./CNBC.m3u8
+        sudo cat >./CNBC.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(yt-dlp -g https://www.livenewsnow.com/american/cnbc.html)
+        EOL
+     - name: NTV24
+       run: |
+        mkdir "JP"
+        cd JP
+        touch ./NTVNews24.m3u8
+        sudo cat >./NTVNews24.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(yt-dlp -g https://youtube.com/channel/UCuTAXTexrhetbOe3zgskJBQ/live)
+        EOL
+     - name: TBS News Dig
+       run: |
+        cd JP
+        touch ./TBSNewsDig.m3u8
+        sudo cat >./TBSNewsDig.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(yt-dlp -g https://youtube.com/tbsnews/live)
+        EOL
+     - name: NHK World News
+       run: |
+        cd JP
+        touch ./NHKWorldNews.m3u8
+        sudo cat >./NHKWorldNews.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(yt-dlp -g https://youtube.com/NHKWORLDJAPAN/live)
+        EOL
+     - name: CBC News
+       run: |
+        mkdir "CA"
+        cd CA
+        touch ./CBCNews.m3u8
+        sudo cat >./CBCNews.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(yt-dlp -g https://www.livenewsnow.com/canadian-news/cbc-news.html)
+        EOL
+     - name: Taiwan+
+       run: |
+        mkdir "TW"
+        cd TW
+        touch ./TaiwanPlus.m3u8
+        sudo cat >./TaiwanPlus.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(yt-dlp -g https://www.youtube.com/@TaiwanPlusLive/live)
+        EOL
+     - name: FTV News
+       run: |
+        cd TW
+        touch ./FTVNews.m3u8
+        sudo cat >./FTVNews.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(yt-dlp -g https://youtube.com/@FTV_News/live)
+        EOL
+     - name: FTV News
+       run: |
+        cd TW
+        touch ./FTVNews.m3u8
+        sudo cat >./FTVNews.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(yt-dlp -g https://youtube.com/@FTV_News/live)
         EOL
      - name: TVBS News
        run: |
@@ -227,7 +448,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://youtube.com/TVBSNEWS01/live)
+        $(yt-dlp -g https://youtube.com/TVBSNEWS01/live)
         EOL
      - name: TTV News
        run: |
@@ -237,7 +458,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://www.youtube.com/@TTV_NEWS/live)
+        $(yt-dlp -g https://www.youtube.com/@TTV_NEWS/live)
         EOL
      - name: CTS News
        run: |
@@ -247,7 +468,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://youtube.com/CtsTw/live)
+        $(yt-dlp -g https://youtube.com/CtsTw/live)
         EOL
      - name: SET News
        run: |
@@ -257,7 +478,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://youtu.be/FoBfXvlOR6I)
+        $(yt-dlp -g https://youtu.be/FoBfXvlOR6I)
         EOL
      - name: SET+ News
        run: |
@@ -267,7 +488,17 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://youtu.be/EB4g7wecgTI)
+        $(yt-dlp -g https://youtu.be/EB4g7wecgTI)
+        EOL
+     - name: EBC News
+       run: |
+        cd TW
+        touch ./EBCNews.m3u8
+        sudo cat >./EBCNews.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(yt-dlp -g https://youtube.com/newsebc/live)
         EOL
      - name : Upload artifact 
        uses: actions/upload-artifact@master 
