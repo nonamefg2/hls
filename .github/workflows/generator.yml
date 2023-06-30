@@ -163,8 +163,8 @@ jobs:
      - name: CNBC
        run: |
         cd US
-        touch ./FBN.m3u8
-        sudo cat >./FBN.m3u8 <<EOL
+        touch ./CNBC.m3u8
+        sudo cat >./CNBC.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
