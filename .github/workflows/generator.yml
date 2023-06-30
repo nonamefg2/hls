@@ -22,27 +22,7 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
         $(youtube-dl -g https://youtube.com/rtvenoticias/live)
         EOL
-     - name: 7NN
-       run: |
-        cd ES
-        touch ./7nn.m3u8
-        sudo cat >./7nn.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://twitch.tv/7nntv)
-        EOL
-     - name: Libertad Digital
-       run: |
-        cd ES
-        touch ./libertaddigital.m3u8
-        sudo cat >./libertaddigital.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://dai.ly/xnm032)
-        EOL
-     - name: Dejate de Historias - Madrid
+     - name: Dejate de Historias [Madrid - España]
        run: |
         cd ES
         mkdir "Madrid"
@@ -52,7 +32,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://youtube.com/channel/UChMCkc02GVSi89TrvhbRasA/live)
+        $(youtube-dl -g https://youtube.com/@dejatedehistoriastv/live)
         EOL
      - name: A24
        run: |
@@ -95,6 +75,16 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
         $(youtube-dl -g https://youtube.com/LaNacionMas/live)
         EOL
+     - name: TN [Argentina]
+       run: |
+        cd AR
+        touch ./TN.m3u8
+        sudo cat >./TN.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://youtube.com/todonoticias/live)
+        EOL
      - name: C5N
        run: |
         cd AR
@@ -105,26 +95,60 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
         $(youtube-dl -g https://youtube.com/c5n/live)
         EOL
-     - name: CNN
+     - name: TN8 [Nicaragua]
        run: |
-        mkdir "US"
-        cd US
-        touch ./CNN.m3u8
-        sudo cat >./CNN.m3u8 <<EOL
+        mkdir "NI"
+        cd NI
+        touch ./tn8.m3u8
+        sudo cat >./tn8.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://youtube.com/@GTVSTREAMSCNN/live)
+        $(youtube-dl -g https://conceptoweb-studio.com/radio/video/tn8/)
+        EOL
+     - name: Canal 10/TVES [El Salvador]
+       run: |
+        mkdir "SV"
+        cd SV
+        touch ./canal10.m3u8
+        sudo cat >./canal10.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://conceptoweb-studio.com/radio/video/tves/)
+        EOL
+     - name: Azteca Guate
+       run: |
+        mkdir "GT"
+        cd GT
+        touch ./aztecaguate.m3u8
+        sudo cat >./aztecaguate.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://conceptoweb-studio.com/radio/video/aztecaguate/)
+        EOL
+     - name: Todo Deportes
+       run: |
+        mkdir "HN"
+        cd HN
+        touch ./tdtv.m3u8
+        sudo cat >./tdtv.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://conceptoweb-studio.com/radio/video/tododeportesplus/)
         EOL
      - name: Weather Channel
        run: |
+        mkdir "US"
         cd US
         touch ./WeatherChannel.m3u8
         sudo cat >./WeatherChannel.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://www.livenewsnow.com/featured/weather-channel.html)
+        $(youtube-dl -g https://newslive.com/featured/weather-channel.html)
         EOL
      - name: FBN
        run: |
@@ -134,7 +158,17 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://www.livenewsnow.com/business/fox-business-network-fbn.html)
+        $(youtube-dl -g https://newslive.com/business/fox-business-network-fbn.html)
+        EOL
+     - name: CNBC
+       run: |
+        cd US
+        touch ./FBN.m3u8
+        sudo cat >./FBN.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://newslive.com/american/cnbc.html)
         EOL
      - name: MSNBC
        run: |
@@ -144,7 +178,17 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://twitch.tv/gtvmsnbc3)
+        $(youtube-dl -g https://twitch.tv/lauramalcolm1)
+        EOL
+     - name: MSNBC Alt
+       run: |
+        cd US
+        touch ./MSNBC-Alt.m3u8
+        sudo cat >./MSNBC-Alt.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        $(youtube-dl -g https://twitch.tv/grhntlk)
         EOL
      - name: NTV24
        run: |
@@ -186,7 +230,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://www.livenewsnow.com/canadian-news/cbc-news.html)
+        $(youtube-dl -g https://newslive.com/canadian-news/cbc-news.html)
         EOL
      - name: Taiwan+
        run: |
@@ -198,16 +242,6 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
         $(youtube-dl -g https://www.youtube.com/@TaiwanPlusLive/live)
-        EOL
-     - name: FTV News
-       run: |
-        cd TW
-        touch ./FTVNews.m3u8
-        sudo cat >./FTVNews.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://youtube.com/@FTV_News/live)
         EOL
      - name: FTV News
        run: |
@@ -267,24 +301,13 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://youtu.be/EB4g7wecgTI)
+        $(youtube-dl -g https://youtu.be/oZdzzvxTfUY)
         EOL
      - name: EBC News
        run: |
         cd TW
         touch ./EBCNews.m3u8
         sudo cat >./EBCNews.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://youtube.com/newsebc/live)
-        EOL
-     - name: Melodie TV
-       run: |
-        mkdir "AT"
-        cd AT
-        touch ./MelodieTV.m3u8
-        sudo cat >./MelodieTV.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
@@ -302,6 +325,6 @@ jobs:
         git config --local user.email "action@github.com" 
         git checkout -b live
         git add .
-        git commit -m "Updates lives specified in extractor.yml"
+        git commit -m "Updates files specified in extractor.yml"
         git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
         git push -f -u origin live
